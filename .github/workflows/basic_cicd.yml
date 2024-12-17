@@ -21,4 +21,6 @@ jobs:
 
       # Step 2: Print "Hello, World!" in the console
       - name: Print Hello World
-        run: echo "Hello, World!"
+        run: | 
+         echo "Hello, World!"
+         ls
