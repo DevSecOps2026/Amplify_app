@@ -9,7 +9,10 @@ jobs:
   zap_scan:
     runs-on: ubuntu-latest
     steps:
-      - name: ZAP Scan
-        uses: zaproxy/action-full-scan@v0.12.0
+      - name: Run Dastardly Action Step
+        uses: PortSwigger/dastardly-github-action@main
         with:
-          target: 'https://main.d2jv35g52ccs4t.amplifyapp.com/'
+          target-url: 'https://main.d2jv35g52ccs4t.amplifyapp.com/'
+          
+          
+          
