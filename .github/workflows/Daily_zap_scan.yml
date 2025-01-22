@@ -1,4 +1,4 @@
-name: Daily ZAP Scan
+name: Daily dastardly Scan
 
 on:
   schedule:
