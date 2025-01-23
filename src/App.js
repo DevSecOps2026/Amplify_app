@@ -18,6 +18,7 @@ const App = () => {
     // Store the form data in state variable
     setSubmittedData({ name, email, description });
 
+    
     // Clear the form fields
     setName('');
     setEmail('');
