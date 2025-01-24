@@ -1,0 +1,18 @@
+name: Daily dastardly Scan
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs daily at midnight UTC
+  workflow_dispatch: # Allows manual trigger of the workflow
+
+jobs:
+  zap_scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Dastardly Action Step
+        uses: PortSwigger/dastardly-github-action@main
+        with:
+          target-url: 'https://main.d2jv35g52ccs4t.amplifyapp.com/'
+          
+          
+          
