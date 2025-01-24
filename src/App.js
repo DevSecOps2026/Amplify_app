@@ -10,15 +10,11 @@ const App = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Perform any necessary validation or submit the form data here
-    console.log('Name:', name);
-    console.log('Email:', email);
-    console.log('Description:', description);
 
-    // Store the form data in state variable
+    // Directly store user inputs without any validation or sanitization
     setSubmittedData({ name, email, description });
 
-    // Clear the form fields
+    // Clear the form fields without verifying content
     setName('');
     setEmail('');
     setDescription('');
@@ -28,38 +24,35 @@ const App = () => {
     <div>
       <Header />
       <div className="container">
-        <h1>XSS Contact Form </h1>
+        <h1>XSS Contact Form</h1>
         <form onSubmit={handleSubmit}>
           <div>
             <label htmlFor="name">Name:</label>
-            <br/>
+            <br />
             <input
               type="text"
               id="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              required
             />
           </div>
           <div>
             <label htmlFor="email">Email:</label>
-            <br/>
+            <br />
             <input
               type="email"
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              required
             />
           </div>
           <div>
             <label htmlFor="description">Description:</label>
-            <br/>
+            <br />
             <textarea
               id="description"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
-              required
             />
           </div>
           <button type="submit">Submit</button>
